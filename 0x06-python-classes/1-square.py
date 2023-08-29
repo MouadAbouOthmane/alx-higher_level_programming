@@ -4,7 +4,7 @@
 class Square:
     """Define a square."""
 	
-	def __init__(self, size)
+	def __init__(self, size):
 	"""Init method
 
 	Args:
