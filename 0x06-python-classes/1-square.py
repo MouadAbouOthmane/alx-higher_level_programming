@@ -5,7 +5,7 @@ class Square:
     """Define a square."""
 	
 	def __init__(self, size):
-		"""Init method
+		"""initialization method
 
 		Args:
 			size: size of square.
