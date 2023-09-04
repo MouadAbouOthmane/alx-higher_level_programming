@@ -36,7 +36,7 @@ class Rectangle:
     @property
     def height(self):
         """property of rectangle's height
-        
+
         Raises:
             TypeError: height must be an integer
             ValueError: height must be >= 0
@@ -53,9 +53,9 @@ class Rectangle:
 
     def area(self):
         """Rectangle area
-        
+
         Return:
-            the current rectangle area 
+            the current rectangle area
         """
         return self.__height * self.__width
 
@@ -63,7 +63,7 @@ class Rectangle:
         """Rectangle perimeter
 
         Return:
-            the current rectangle perimeter 
+            the current rectangle perimeter
         """
         if self.__width == 0 or self.__height == 0:
             return 0
