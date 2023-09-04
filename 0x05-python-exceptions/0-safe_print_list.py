@@ -3,6 +3,7 @@
 def safe_print_list(my_list=[], x=0):
     try:
         if my_list == [] or x < 1:
+            print()
             return 0
         for i in range(x):
             print(my_list[i], end="")
