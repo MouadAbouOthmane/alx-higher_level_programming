@@ -12,3 +12,17 @@
     >>> matrix_divided(matrix, "fs")
     Traceback (most recent call last):
     TypeError: div must be a number
+
+    >>> matrix_divided([[1], [2, 3]], 2)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+    >>> matrix_divided(["dwawd", 123], 7)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided("a", "fs")
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    
