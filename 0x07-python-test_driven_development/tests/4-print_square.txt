@@ -1,0 +1,34 @@
+
+    >>> print_square = __import__('4-print_square').print_square
+
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    >>> print_square(3)
+    ####
+    ####
+    ####
+
+
+    >>> print_square("d")
+    Traceback (most recent call last):
+    TypeError: size must be a integer
+    
+    >>> print_square(2.1)
+    ##
+    ##
+
+    >>> print_square(0)
+
+
+    >>> print_square(-4.2)
+    Traceback (most recent call last):
+    TypeError: size must be a integer
+    
+    
+    >>> print_square(-2)
+    Traceback (most recent call last):
+    TypeError: size must be >= 0
