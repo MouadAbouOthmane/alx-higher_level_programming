@@ -1,0 +1,14 @@
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+    >>> text_indentation("dwwd")
+    dwwd
+
+    >>> text_indentation("tes.s:gfe?dsa")
+    tes.
+        ...
+    dsa
+
+    >>> text_indentation(32)
+    Traceback (most recent call last):
+    TypeError: text must be a string
