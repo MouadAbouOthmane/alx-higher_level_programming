@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""8. Class to JSON TASK"""
 
 
 def class_to_json(obj):
@@ -10,5 +11,5 @@ def class_to_json(obj):
         obj: instance of class
     """
     if not obj:
-        return
+        return {}
     return vars(obj)
