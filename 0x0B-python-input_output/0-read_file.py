@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+from sys import stdout
 """0. Read file Module"""
 
 
@@ -13,4 +14,4 @@ def read_file(filename=""):
         return
 
     with open(filename, "r", encoding="utf-8") as file:
-        print(file.read())
+        stdout.write(file.read())
