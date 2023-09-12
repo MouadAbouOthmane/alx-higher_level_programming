@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from sys import stdout
 """0. Read file Module"""
+from sys import stdout
 
 
 def read_file(filename=""):
