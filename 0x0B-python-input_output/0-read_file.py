@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """0. Read file Module"""
-from sys import stdout
 
 
 def read_file(filename=""):
@@ -13,5 +12,6 @@ def read_file(filename=""):
     if filename == "":
         return
 
-    with open(filename, "r", encoding="utf-8") as file:
-        stdout.write(file.read())
+    with open(filename) as file:
+        for line in file:
+            print(line)
