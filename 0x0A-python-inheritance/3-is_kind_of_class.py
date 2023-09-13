@@ -2,7 +2,7 @@
 """3. Same class or inherit from TASK"""
 
 
-def inherits_from(obj, a_class):
+def is_kind_of_class(obj, a_class):
     """
     function that returns True if the object
     is an instance of, or if the object is an instance
