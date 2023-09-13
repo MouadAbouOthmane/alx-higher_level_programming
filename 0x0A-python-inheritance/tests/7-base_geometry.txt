@@ -8,7 +8,19 @@
     >>> bg.integer_validator("mydwa", 0)
     Traceback (most recent call last):
     ValueError: mydwa must be greater than 0
-
-    >>> bg.integer_validator("mydwa", "d")
+    
+    >>> bg.integer_validator("temp", -20)
     Traceback (most recent call last):
-    TypeError: mydwa must be an integer
+    ValueError: temp must be greater than 0
+
+    >>> bg.integer_validator("age", "d")
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("rooms", True)
+    Traceback (most recent call last):
+    TypeError: rooms must be an integer
+
+    >>> bg.integer_validator("height", 1.94)
+    Traceback (most recent call last):
+    TypeError: height must be an integer
