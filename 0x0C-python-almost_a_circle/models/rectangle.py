@@ -4,10 +4,18 @@ Base = __import__('base').Base
 
 
 class Rectangle(Base):
-    """Class Rectangle inherits from Base"""
+    """Class Rectangle inherits from Base
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """constructor"""
+        """constructor
+        
+        Args:
+            width: rectangle width
+            height: rectangle height
+            x: rectangle axis x
+            y: rectangle axis y
+        """
         super().__init__(id)
         self.__width = width
         self.__height = height
