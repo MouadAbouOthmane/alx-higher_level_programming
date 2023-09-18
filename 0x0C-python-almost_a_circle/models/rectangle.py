@@ -17,10 +17,10 @@ class Rectangle(Base):
             y: rectangle axis y
         """
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -76,29 +76,29 @@ class Rectangle(Base):
 
     def area(self):
         """returns the area value of the Rectangle"""
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """prints in stdout the Rectangle with the character #"""
-        print('\n' * self.__y, end="")
-        for _ in range(self.__height):
-            print((' ' * self.__x) + ('#' * self.__width))
+        print('\n' * self.y, end="")
+        for _ in range(self.height):
+            print((' ' * self.x) + ('#' * self.width))
 
     def __str__(self):
         """__str__ method """
         return "[Rectangle] (" \
-            + f"{self.id}) {self.__x}/{self.__y} - "\
-            + f"{self.__width}/{self.__height}"
+            + f"{self.id}) {self.x}/{self.y} - "\
+            + f"{self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         """update the argument of instance"""
         if len(args) > 0:
             try:
                 self.id = args[0]
-                self.__width = args[1]
-                self.__height = args[2]
-                self.__x = args[3]
-                self.__y = args[4]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
             except IndexError:
                 pass
         else:
@@ -106,15 +106,15 @@ class Rectangle(Base):
                 if key == 'id':
                     self.id = value
                 elif key == 'width':
-                    self.__width = value
+                    self.width = value
                 elif key == 'height':
-                    self.__height = value
+                    self.height = value
                 elif key == 'x':
-                    self.__x = value
+                    self.x = value
                 elif key == 'y':
-                    self.__y = value
+                    self.y = value
 
     def to_dictionary(self):
         """dictionary representation of a Rectangle:"""
         return {'x': self.x, 'y': self.y,
-                'id': self.id, 'height': self.__height, 'width': self.__width}
+                'id': self.id, 'height': self.height, 'width': self.width}
