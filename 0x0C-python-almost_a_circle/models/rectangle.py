@@ -8,8 +8,9 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """constructor
-        
+        """
+        instatiation
+
         Args:
             width: rectangle width
             height: rectangle height
