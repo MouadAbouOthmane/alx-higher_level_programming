@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""2. First Rectangle TASK"""
+"""2. First Rectangle TASK """
+Base = __import__('base').Base
 
 
 class Rectangle(Base):
