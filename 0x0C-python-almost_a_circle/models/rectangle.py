@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """2. First Rectangle TASK """
-from models.base import Base
+# from models.base import Base
+Base = __import__('base').Base
 
 
 class Rectangle(Base):
@@ -82,3 +83,9 @@ class Rectangle(Base):
         """prints in stdout the Rectangle with the character #"""
         for _ in range(self.__height):
             print('#' * self.__width)
+
+    def __str__(self):
+        """__str__ method """
+        return "[Rectangle] (" \
+            + f"{self.id}) <{self.__x}>/<{self.__y}> - "\
+            + f"<{self.__width}>/<{self.__height}>"
