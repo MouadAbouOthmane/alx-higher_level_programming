@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """2. First Rectangle TASK """
-from models.base import Base
+# from models.base import Base
+Base = __import__('base').Base
+
 
 
 class Rectangle(Base):
@@ -113,3 +115,7 @@ class Rectangle(Base):
                     self.__x = value
                 elif key == 'y':
                     self.__y = value
+
+    def to_dictionary(self):
+        return {'x': self.x, 'y': self.y, 
+                'id': self.id, 'height': self.__height, 'width': self.__width}
