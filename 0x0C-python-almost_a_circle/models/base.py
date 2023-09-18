@@ -55,9 +55,12 @@ class Base:
     def load_from_file(cls):
         """list of instances"""
         filename = cls.__name__ + '.json'
-        with open(filename, 'r', encoding="utf-8") as file:
-            list_dics = Base.from_json_string(file.read())
-            list_objs = []
-            for dic in list_dics:
-                list_objs.append(cls.create(**dic))
-            return list_objs
+        try:
+            with open(filename, 'r', encoding="utf-8") as file:
+                list_dics = Base.from_json_string(file.read())
+                list_objs = []
+                for dic in list_dics:
+                    list_objs.append(cls.create(**dic))
+                return list_objs
+        except IOError:
+            return []
