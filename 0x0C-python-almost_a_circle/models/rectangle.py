@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """2. First Rectangle TASK """
-# from models.base import Base
-Base = __import__('base').Base
+from models.base import Base
 
 
 class Rectangle(Base):
