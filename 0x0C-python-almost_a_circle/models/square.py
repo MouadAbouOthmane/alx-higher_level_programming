@@ -32,8 +32,8 @@ class Square(Rectangle):
     def __str__(self):
         """__str__ method """
         return "[Square] (" \
-            + f"{self.id}) {self.__x}/{self.__y} - "\
-            + f"{self.width}"
+            + f"{self.id}) {self.x}/{self.y} - "\
+            + f"{self.size}"
 
     def update(self, *args, **kwargs):
         """update the argument of instance"""
