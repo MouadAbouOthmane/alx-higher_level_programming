@@ -50,3 +50,14 @@ class Base:
             dummy = cls(10)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """list of instances"""
+        filename = cls.__name__ + '.json'
+        with open(filename, 'r', encoding="utf-8") as file:
+            list_dics = Base.from_json_string(file.read())
+            list_objs = []
+            for dic in list_dics:
+                list_objs.append(cls.create(**dic))
+            return list_objs
