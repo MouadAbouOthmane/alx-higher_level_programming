@@ -1,4 +1,6 @@
 #!/usr/bin/node
 const { argv } = require('process');
 
-console.log('My number: ' + parseInt(argv[2]));
+let num = parseInt(argv[2]);
+
+console.log(Number.isInteger(num) ? 'My number: ' + num : 'Not a number');
