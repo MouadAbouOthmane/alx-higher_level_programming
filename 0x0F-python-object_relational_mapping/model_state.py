@@ -8,6 +8,7 @@ Base = declarative_base()
 
 
 class State(Base):
+    """state class contain id and name"""
     __tablename__ = "statesl"
 
     id = Column(Integer, primary_key=True, unique=True)
