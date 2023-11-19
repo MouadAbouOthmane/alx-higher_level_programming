@@ -4,20 +4,25 @@
 import MySQLdb
 import sys
 
-db = MySQLdb.connect(
-    host='localhost:3306',
-    user=sys.argv[1],
-    passwd=sys.argv[2],
-    db=sys.argv[3]
-    )
+if __name__ == "__main__":
 
-cur = db.cursor()
+    db = MySQLdb.connect(
+        host='localhost',
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3]
+        )
 
-sql = "Select * from states"
+    cur = db.cursor()
 
-cur.execute(sql)
+    sql = "Select * from states"
 
-res = cur.fetchall()
+    cur.execute(sql)
 
-for x in res:
-    print(x)
+    res = cur.fetchall()
+
+    for x in res:
+        print(x)
+
+    cur.close()
+    db.close()
