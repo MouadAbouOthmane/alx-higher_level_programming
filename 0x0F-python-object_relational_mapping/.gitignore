@@ -2,3 +2,4 @@
 0-select_states.sql
 test.py
 6-model_state*
+__pycache__/*
