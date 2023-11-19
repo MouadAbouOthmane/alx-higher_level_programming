@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""12. Update a state
+"""11. Add a new state
 """
 import sys
 from model_state import Base, State
@@ -15,6 +15,5 @@ if __name__ == "__main__":
     session = Session()
 
     state = session.query(State).filter(State.id == 2).first()
-    state.name = "New forko"
+    state.name = "New Mexico"
     session.commit()
-
