@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 import MySQLdb
+import sys
 
 db = MySQLdb.connect(
     host='localhost',
-    user='admin',
-    passwd='root1234',
-    db='hbtn_0e_0_usa'
+    user=sys.argv[1],
+    passwd=sys.argv[2],
+    db=sys.argv[3]
     )
 
 cur = db.cursor()
