@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    sql = "select * from states where name like 'N%';"
+    sql = "select * from states where name like 'N%' order by id"
 
     cur.execute(sql)
 
