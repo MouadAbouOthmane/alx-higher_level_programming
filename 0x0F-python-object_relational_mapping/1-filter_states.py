@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""0. Get all states"""
+"""1. Filter states"""
 
 import MySQLdb
 import sys
@@ -16,7 +16,8 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    sql = "select * from states where name like 'N%' order by id"
+    sql = "select * from states where name like BINARY 'N%' order by id"
+
 
     cur.execute(sql)
 
