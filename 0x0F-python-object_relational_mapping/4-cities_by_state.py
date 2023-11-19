@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""1. Filter states"""
+"""4. Cities by states"""
 
 import MySQLdb
 import sys
@@ -16,7 +16,8 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    sql = "select * from states where name like BINARY 'N%' order by id"
+    sql = "select c.id , c.name, s.name from states as s " \
+        " inner join cities as c on c.state_id = s.id"
 
     cur.execute(sql)
 
