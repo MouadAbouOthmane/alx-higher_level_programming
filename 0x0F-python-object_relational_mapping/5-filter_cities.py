@@ -28,6 +28,6 @@ if __name__ == "__main__":
             print(res[i][0], end="")
         else:
             print(f"{res[i][0]}, ", end="")
-
+    print()
     cur.close()
     db.close()
