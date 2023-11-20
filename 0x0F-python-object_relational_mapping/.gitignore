@@ -3,3 +3,4 @@
 test.py
 6-model_state*
 __pycache__/*
+14-model_city_fetch_by_state.sql
