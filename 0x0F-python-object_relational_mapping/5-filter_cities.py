@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     for i in range(len(res)):
         if i == len(res) - 1:
-            print(res[i][0])
+            print(res[i][0], end="")
         else:
             print(f"{res[i][0]}, ", end="")
 
