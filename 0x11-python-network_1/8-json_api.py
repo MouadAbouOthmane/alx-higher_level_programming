@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     url = 'http://0.0.0.0:5000/search_user'
     arg = sys.argv[1] if len(sys.argv) == 2 else ""
-    r = requests.post(url, data={'q': arg}).text
+    r = requests.post(url, data={'q': arg})
     try:
         json = r.json()
         if json == '{}':
