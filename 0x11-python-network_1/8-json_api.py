@@ -5,7 +5,7 @@ if __name__ == "__main__":
     import requests
     import sys
 
-    url = 'https://httpbin.org/post'
+    url = 'http://0.0.0.0:5000/search_user'
     arg = sys.argv[1] if len(sys.argv) == 2 else ""
     r = requests.post(url, data={'q': arg})
     # try:
@@ -13,7 +13,7 @@ if __name__ == "__main__":
     if g == '{}':
         print('No result')
     else:
-        print(g)
+        print(g.text)
     # except Exception:
     #     print("Not a valid JSON")
     # if r.status_code == requests.codes.ok:
