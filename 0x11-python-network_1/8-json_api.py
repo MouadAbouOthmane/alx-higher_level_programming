@@ -5,7 +5,7 @@ if __name__ == "__main__":
     import requests
     import sys
 
-    url = 'https://httpbin.org/post'
+    url = 'http://0.0.0.0:5000/search_user'
     arg = sys.argv[1]
     r = requests.post(url, data={'q': arg}).text
     try:
