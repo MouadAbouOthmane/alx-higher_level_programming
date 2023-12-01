@@ -16,7 +16,8 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    sql = "select * from states where name = '{}'".format(sys.argv[4])
+    sql = "select * from states where name like binary '{}'".format(
+        sys.argv[4])
 
     cur.execute(sql)
 
